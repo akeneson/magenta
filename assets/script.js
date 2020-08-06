@@ -2,15 +2,19 @@ const randomBtn = $("#randomButton")
 const homeBtn = $("#homeButton")
 const boredAPIURL = "http://www.boredapi.com/api/"
 const boredRandomPath = "activity/"
-
+const boredRandomAPI = boredAPIURL + boredRandomPath
+let searchType;
 
 // Random button function
 function randomBtnClick() {
+    searchType = "random"
     // Hide search area and show results area
     $("#searchArea").addClass("hide")
     $("#resultArea").removeClass("hide")
 
-    const boredRandomAPI = boredAPIURL + boredRandomPath
+    // Clear result contents
+    $("#resultArea").empty()
+
     // Make API call
     $.ajax({
         url: boredRandomAPI,
@@ -36,23 +40,34 @@ function randomBtnClick() {
         let homeBtnEl = homeBtn.text("Go Home")
 
         // Search again button
+        let retryBtn = $("<button>").attr({
+            class: "btn btn-secondary",
+            id: "retryButton"
+        })
+        let retryBtnEl = retryBtn.text("Look Again")
 
         // Add results to results area on page
-        let boredResults = $("<div>").append(boredAPIActivityEl, boredAPITypeEl, boredAPIParticipantsEL, boredAPIPriceEL, homeBtnEl)
+        let boredResults = $("<div>").append(boredAPIActivityEl, boredAPITypeEl, boredAPIParticipantsEL, boredAPIPriceEL, homeBtnEl, retryBtnEl)
         $("#resultArea").append(boredResults)
 
     })
 }
 
 function homeBtnClick() {
+    // Reset Search Type
+    searchType = ""
     // Hide result area and show search area
     $("#resultArea").addClass("hide")
     $("#searchArea").removeClass("hide")
 
-    // Clear result contents
-    $("#resultArea").empty()
+
 
 }
 
 randomBtn.on("click", randomBtnClick)
 $(document).on("click", "#homeButton", homeBtnClick)
+$(document).on("click", "#retryButton", function () {
+    if (searchType === "random") {
+        randomBtnClick()
+    }
+})
