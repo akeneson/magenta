@@ -1,3 +1,31 @@
 .hide {
   display: none;
 }
+
+
+header{
+  align-self: center;
+}
+
+body
+{
+  padding: 10px;
+  margin: 200px;
+  text-align: center;
+}
+
+/* do we want this center or left aligned? */
+.priceContainer,
+.activityContainer,
+.peopleContainer{
+  text-indent: 0;
+  text-align: center;
+}
+
+img{
+  width: 40px;
+  height: 40px;
+
+}
+
+

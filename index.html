@@ -1,38 +1,95 @@
 <!DOCTYPE html>
 <html lang="en-us">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Bootstrap Demo Buttons</title>
 
-    <!-- Bootstrap CSS -->
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    />
-    <!-- Local CSS -->
-    <link rel="stylesheet" href="./assets/style.css" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <title>Bootstrap Demo Buttons</title>
 
-  <body>
-    <h1>COVID Boredem Crusher</h1>
-    <!-- Home area -->
-    <div id="searchArea" class="container">
-      <!-- Regular Buttons -->
-      <button id="randomButton" class="btn btn-secondary">
-        Help fight boredem
-      </button>
-    </div>
-    <div id="resultArea" class="container hide">
-      <h2>Here's an idea!</h2>
-    </div>
-    <!-- JQuery -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <!-- Font Awesome -->
-    <script
-      src="https://kit.fontawesome.com/ff9445e543.js"
-      crossorigin="anonymous"
-    ></script>
-    <!-- Local JavaScript -->
-    <script src="./assets/script.js"></script>
-  </body>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+  <!-- Local CSS -->
+  <link rel="stylesheet" href="./assets/style.css" />
+</head>
+
+<body>
+  <h1>COVID Boredem Crusher</h1>
+  <!-- Home area -->
+  <div id="searchArea" class="container">
+    <!-- Regular Buttons -->
+    <button id="randomButton" class="btn btn-secondary">
+      Help fight boredem
+    </button>
+    <hr>
+      <!-- Activity Container -->
+      <div class="Container">
+        <div class="activityContainer col 9">
+          <span>
+            <!-- Activity Icon -->
+            <img src="https://cdn.onlinewebfonts.com/svg/img_343033.png" alt="Avatar" class="image">
+
+            <!-- Activity Dropdown -->
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdown-menu" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Activity
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </span>
+        </div>
+      </div>
+
+          <br>
+
+          <!-- Price Container-->
+          <div class="priceContainer">
+            <!-- Price Icon -->
+            <img
+              src="https://icons-for-free.com/iconfiles/png/512/business+cash+finance+money+icon-1320086605588208357.png"
+              alt="Avatar" class="image">
+
+            <!-- Price Dropdown -->
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Price Range
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">Free</a>
+              <a class="dropdown-item" href="#">less than $5</a>
+              <a class="dropdown-item" href="#">$5-15</a>
+            </div>
+          </div>
+          <br>
+          <!-- Price Container-->
+          <div class="personContainer">
+            <!-- Person Icon -->
+            <img src="https://www.tuktukdesign.com/wp-content/uploads/2020/01/people-icon-vector.jpg" alt="Avatar"
+              class="image">
+            <!-- Person Dropdown -->
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              # of people
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">1 person</a>
+              <a class="dropdown-item" href="#">2 people</a>
+              <a class="dropdown-item" href="#">3 people</a>
+            </div>
+          </div>
+
+      </div>
+      <div id="resultArea" class="container hide">
+        <h2>Here's an idea!</h2>
+
+      </div>
+      <!-- JQuery -->
+      <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+      <!-- Font Awesome -->
+      <script src="https://kit.fontawesome.com/ff9445e543.js" crossorigin="anonymous"></script>
+      <!-- Local JavaScript -->
+      <script src="./assets/script.js"></script>
+</body>
+
 </html>
