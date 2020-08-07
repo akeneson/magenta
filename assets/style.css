@@ -7,6 +7,7 @@ body
   padding: 10px;
   margin-top: 20px;
   text-align: center;
+  align-content: center;
 }
 .jumptron{
   background-color: none;
@@ -20,15 +21,24 @@ body
   color: white;
   background-color: maroon;
   border-color: maroon;
+  align-self: center;
 }
 
-/* do we want this center or left aligned? */
+.icon{
+  text-align: right;
+}
+.menu-4{
+  text-align: left;
+}
+
+/* do we want this center or left aligned?
 .priceContainer,
 .activityContainer,
 .peopleContainer{
-  text-indent: 0;
+  text-indent: 300;
   text-align: center;
-}
+} */
+
 
 img{
   width: 40px;
@@ -37,3 +47,6 @@ img{
 }
 
 
+.footer{
+  color: maroon;
+}
