@@ -2,16 +2,24 @@
   display: none;
 }
 
-
-header{
-  align-self: center;
-}
-
 body
 {
   padding: 10px;
-  margin: 200px;
+  margin-top: 20px;
   text-align: center;
+}
+.jumptron{
+  background-color: none;
+}
+.COVID{
+  color: maroon;
+  font-size: 80px;
+  background-color: none;
+}
+.btn-primary {
+  color: white;
+  background-color: maroon;
+  border-color: maroon;
 }
 
 /* do we want this center or left aligned? */

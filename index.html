@@ -12,14 +12,17 @@
 </head>
 
 <body>
-  <h1>COVID Boredem Crusher</h1>
+  <div class="jumbotron jumbotron-fluid">
+  <h1 class="COVID">COVID</h1><h2>BoredomCrusher</h2>
+  </div>
   <!-- Home area -->
   <div id="searchArea" class="container">
     <!-- Regular Buttons -->
-    <button id="randomButton" class="btn btn-secondary">
-      Help fight boredem
+    <button id="randomButton" class="btn btn-lg btn-primary">
+      Search for me
     </button>
     <hr>
+
     <!-- Activity Container -->
     <div class="Container">
       <div class="activityContainer">
@@ -47,8 +50,7 @@
     <div class="Container">
       <div class="priceContainer">
         <!-- Price Icon -->
-        <img src="https://icons-for-free.com/iconfiles/png/512/business+cash+finance+money+icon-1320086605588208357.png"
-          alt="Avatar" class="image">
+        <i class="fab fa-cc-amazon-pay fa-2x"></i>
 
         <!-- Price Dropdown -->
         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
@@ -80,21 +82,36 @@
           <a class="dropdown-item" href="#">3 people</a>
         </div>
       </div>
+      <br>
+      <!-- how do we want to pick persons? dropdown vs these buttons -->
+      <div class="personContainer">
+        <i class="fas fa-users fa-2x"></i>
+        <div class="btn" aria-label="Toolbar with button groups">
+          <div class="btn-group" role="group" aria-label="First group">
+            <button type="button" class="btn btn-secondary">1</button>
+            <button type="button" class="btn btn-secondary">2</button>
+            <button type="button" class="btn btn-secondary">3</button>
+            <button type="button" class="btn btn-secondary">4+</button>
+          </div>
+        </div>
+      </div>
+
+
 
     </div>
   </div>
 
-  
-    <div id="resultArea" class="container hide">
-      <h2>Here's an idea!</h2>
 
-    </div>
-    <!-- JQuery -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/ff9445e543.js" crossorigin="anonymous"></script>
-    <!-- Local JavaScript -->
-    <script src="./assets/script.js"></script>
+  <div id="resultArea" class="container hide">
+    <h2>Here's an idea!</h2>
+
+  </div>
+  <!-- JQuery -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/ff9445e543.js" crossorigin="anonymous"></script>
+  <!-- Local JavaScript -->
+  <script src="./assets/script.js"></script>
 </body>
 
 </html>
