@@ -24,18 +24,20 @@ body
   align-self: center;
 }
 
-.col-4{
+.icon{
   text-align: right;
 }
+.menu-4{
+  text-align: left;
+}
 
-
-/* do we want this center or left aligned? */
+/* do we want this center or left aligned?
 .priceContainer,
 .activityContainer,
 .peopleContainer{
   text-indent: 300;
   text-align: center;
-}
+} */
 
 
 img{
