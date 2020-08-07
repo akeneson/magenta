@@ -13,7 +13,8 @@
 
 <body>
   <div class="jumbotron jumbotron-fluid">
-  <h1 class="COVID">COVID</h1><h2>BoredomCrusher</h2>
+    <h1 class="COVID">COVID</h1>
+    <h2>BoredomCrusher</h2>
   </div>
   <!-- Home area -->
   <div id="searchArea" class="container">
@@ -21,84 +22,92 @@
     <button id="randomButton" class="btn btn-lg btn-primary">
       Search for me
     </button>
-    <hr>
+  </div>
+  <hr>
 
-    <!-- Activity Container -->
-    <div class="Container">
-      <div class="activityContainer">
-        <span>
-          <!-- Activity Icon -->
-          <img src="https://cdn.onlinewebfonts.com/svg/img_343033.png" alt="Avatar" class="image">
+  <!-- Activity Container -->
+  <div class="container">
+    <div class=" row activityContainer">
+      <!-- Activity Icon -->
+      <div class="col-4">
 
-          <!-- Activity Dropdown -->
-          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdown-menu" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            Activity
-          </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </div>
-        </span>
+        <img src="https://cdn.onlinewebfonts.com/svg/img_343033.png" alt="Avatar" class="image">
+
       </div>
+
+      <!-- Activity Dropdown -->
+      <button class="col-5 btn btn-secondary dropdown-toggle" type="button" id="dropdown-menu" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false">
+        Activity
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <a class="dropdown-item" href="#">Something else here</a>
+      </div>
+
     </div>
+  </div>
 
-    <br>
+  <br>
 
-    <!-- Price Container-->
-    <div class="Container">
-      <div class="priceContainer">
-        <!-- Price Icon -->
+  <!-- Price Container-->
+  <div class="Container">
+    <div class="row priceContainer">
+      <!-- Price Icon -->
+      <div class="col-4">
         <i class="fab fa-cc-amazon-pay fa-2x"></i>
-
-        <!-- Price Dropdown -->
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-          aria-haspopup="true" aria-expanded="false">
-          Price Range
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="#">Free</a>
-          <a class="dropdown-item" href="#">less than $5</a>
-          <a class="dropdown-item" href="#">$5-15</a>
-        </div>
+      </div>
+      <!-- Price Dropdown -->
+      <button class="col-5 btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Price Range
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="#">Free</a>
+        <a class="dropdown-item" href="#">less than $5</a>
+        <a class="dropdown-item" href="#">$5-15</a>
       </div>
     </div>
+  </div>
+  <br>
+  <!-- Person Container-->
+  <div class="Container">
+    <div class="row personContainer">
+      <!-- Person Icon -->
+      <div class="col-4">
+      <img src="https://www.tuktukdesign.com/wp-content/uploads/2020/01/people-icon-vector.jpg" alt="Avatar"
+        class="image">
+      </div>
+      <!-- Person Dropdown -->
+      <button class="col-5 btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false">
+        # of people
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="#">1 person</a>
+        <a class="dropdown-item" href="#">2 people</a>
+        <a class="dropdown-item" href="#">3 people</a>
+      </div>
+    </div>
+  </div>
     <br>
-    <!-- Person Container-->
-    <div class="Container">
-      <div class="personContainer">
-        <!-- Person Icon -->
-        <img src="https://www.tuktukdesign.com/wp-content/uploads/2020/01/people-icon-vector.jpg" alt="Avatar"
-          class="image">
-        <!-- Person Dropdown -->
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-          aria-haspopup="true" aria-expanded="false">
-          # of people
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="#">1 person</a>
-          <a class="dropdown-item" href="#">2 people</a>
-          <a class="dropdown-item" href="#">3 people</a>
+    <!-- how do we want to pick persons? dropdown vs these buttons -->
+    <div class="personContainer">
+      <i class="fas fa-users fa-2x"></i>
+      <div class="btn" aria-label="Toolbar with button groups">
+        <div class="btn-group" role="group" aria-label="First group">
+          <button type="button" class="btn btn-secondary">1</button>
+          <button type="button" class="btn btn-secondary">2</button>
+          <button type="button" class="btn btn-secondary">3</button>
+          <button type="button" class="btn btn-secondary">4+</button>
         </div>
       </div>
-      <br>
-      <!-- how do we want to pick persons? dropdown vs these buttons -->
-      <div class="personContainer">
-        <i class="fas fa-users fa-2x"></i>
-        <div class="btn" aria-label="Toolbar with button groups">
-          <div class="btn-group" role="group" aria-label="First group">
-            <button type="button" class="btn btn-secondary">1</button>
-            <button type="button" class="btn btn-secondary">2</button>
-            <button type="button" class="btn btn-secondary">3</button>
-            <button type="button" class="btn btn-secondary">4+</button>
-          </div>
-        </div>
-      </div>
-
-
-
     </div>
+
+
+
+  </div>
   </div>
 
 
@@ -113,5 +122,9 @@
   <!-- Local JavaScript -->
   <script src="./assets/script.js"></script>
 </body>
+<hr>
+<footer>
+  <h8 class="footer"> &#169 Copyright by Magenta</h8>
+</footer>
 
 </html>
