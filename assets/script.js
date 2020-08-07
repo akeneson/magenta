@@ -1,6 +1,6 @@
 const randomBtn = $("#randomButton")
 const homeBtn = $("#homeButton")
-const boredAPIURL = "http://www.boredapi.com/api/"
+const boredAPIURL = "https://www.boredapi.com/api/"
 const boredRandomPath = "activity/"
 const boredRandomAPI = boredAPIURL + boredRandomPath
 let searchType;
@@ -59,9 +59,6 @@ function homeBtnClick() {
     // Hide result area and show search area
     $("#resultArea").addClass("hide")
     $("#searchArea").removeClass("hide")
-
-
-
 }
 
 randomBtn.on("click", randomBtnClick)
