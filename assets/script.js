@@ -4,6 +4,7 @@ const boredAPIURL = "https://www.boredapi.com/api/"
 const boredRandomPath = "activity/"
 const boredRandomAPI = boredAPIURL + boredRandomPath
 let searchType;
+let activityType;
 
 // Random button function
 function randomBtnClick() {
@@ -78,5 +79,6 @@ $(document).on("click", "#retryButton", function () {
 $(document).on("click", ".activityBtn", function () {
     let activityText = $(this).text()
     $("#activityButton").text(activityText)
+    activityType = $(this).text()
     console.log(activityText)
 })
