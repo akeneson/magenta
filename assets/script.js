@@ -61,10 +61,22 @@ function homeBtnClick() {
     $("#searchArea").removeClass("hide")
 }
 
+// Listner for random buttons
 randomBtn.on("click", randomBtnClick)
+
+// Listener for home button
 $(document).on("click", "#homeButton", homeBtnClick)
+
+// Listener for retry button
 $(document).on("click", "#retryButton", function () {
     if (searchType === "random") {
         randomBtnClick()
     }
+})
+
+// Listener to update drop-downs
+$(document).on("click", ".activityBtn", function () {
+    let activityText = $(this).text()
+    $("#activityButton").text(activityText)
+    console.log(activityText)
 })
