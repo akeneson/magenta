@@ -5,6 +5,7 @@ const boredRandomPath = "activity/"
 const boredRandomAPI = boredAPIURL + boredRandomPath
 let searchType;
 let activityType;
+let activityPeople;
 
 // Random button function
 function randomBtnClick() {
@@ -62,6 +63,15 @@ function homeBtnClick() {
     $("#searchArea").removeClass("hide")
 }
 
+function filteredSearch() {
+    searchType = custom
+
+    let activitySearchType = "type=" + activityType + "&"
+    let activitySearchPeople = "participants=" + activityPeople
+    let filteredSearchURL = boredAPIURL + "activity?" + activitySearchType + activitySearchPeople
+
+}
+
 // Listner for random buttons
 randomBtn.on("click", randomBtnClick)
 
@@ -75,9 +85,21 @@ $(document).on("click", "#retryButton", function () {
     }
 })
 
-// Listener to update drop-downs
+// Listener for filtered search button
+$("#useMyFilter").on("click", filteredSearch)
+
+// Listener to update activity drop-downs
 $(document).on("click", ".activityBtn", function () {
     let activityText = $(this).text()
     $("#activityButton").text(activityText)
     activityType = $(this).text()
+})
+
+// Listener for people count
+$(document).on("click", ".peopleBtn", function () {
+    if (activityPeople >= 4) {
+        activityPeople = $(this).text()
+    } else {
+        activityPeople = $(this).text()
+    }
 })
