@@ -80,5 +80,4 @@ $(document).on("click", ".activityBtn", function () {
     let activityText = $(this).text()
     $("#activityButton").text(activityText)
     activityType = $(this).text()
-    console.log(activityText)
 })
