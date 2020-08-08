@@ -46,9 +46,11 @@
       <div class="Container">
         <div class="activityContainer">
             <!-- Activity Dropdown -->
-            <label for="activityButton"><i class="fas fa-running fa-3x"></i>Pick an activity: </label>
+            <label for="activityButton"><h5>Pick an activity: </h5></label>
+            <br>
+            <i class="fas fa-running fa-2x"></i>
             <button
-              class="btn btn-secondary dropdown-toggle"
+              class="btn btn-secondary dropdown-toggle btn-lg"
               type="button"
               id="activityButton"
               data-toggle="dropdown"
@@ -72,17 +74,19 @@
       <div class="Container">
         <div class="priceContainer">
           <!-- Price Dropdown -->
+            <h5>Price Range:</h5>
+            <br>
+            <i class="fab fa-cc-amazon-pay fa-2x"></i>
           <button
-            class="btn btn-secondary dropdown-toggle"
+            class="btn btn-secondary dropdown-toggle btn-lg"
             type="button"
             id="dropdownMenuButton"
             data-toggle="dropdown"
             aria-haspopup="true"
             aria-expanded="false"
-          ><i class="fab fa-cc-amazon-pay fa-2x"></i>
-            Price Range
+          >$
           </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <div class="dropdown-menu btn-lg" aria-labelledby="dropdownMenuButton">
             <a class="dropdown-item" href="#">Free</a>
             <a class="dropdown-item" href="#">less than $5</a>
             <a class="dropdown-item" href="#">$5-15</a>
@@ -93,12 +97,14 @@
       <!-- Person Container-->
       <div class="personContainer">
         <div class="btn" aria-label="Toolbar with button groups">
+          <h5>Number of perons:</h5>
+          <br>
           <div class="btn-group" role="group" aria-label="First group">
             <button type="button" class="btn btn-secondary" disabled><i class="fas fa-users fa-2x"></i></button>
-            <button type="button" class="btn btn-secondary">1</button>
-            <button type="button" class="btn btn-secondary">2</button>
-            <button type="button" class="btn btn-secondary">3</button>
-            <button type="button" class="btn btn-secondary">4+</button>
+            <button type="button" class="btn btn-secondary" id="onePerson">1</button>
+            <button type="button" class="btn btn-secondary" id="twoPerson">2</button>
+            <button type="button" class="btn btn-secondary" id="threePerson">3</button>
+            <button type="button" class="btn btn-secondary" id="fourPerson">4+</button>
           </div>
         </div>
       </div>
