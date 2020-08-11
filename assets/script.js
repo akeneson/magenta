@@ -1,3 +1,21 @@
+// COVID case information
+$(document).ready(function () {
+    // Search for texas case counts
+    covidURL = "https://api.covidtracking.com/v1/states/tx/current.json"
+
+    $.ajax({
+        url: covidURL,
+        method: "GET"
+    }).then(function (response) {
+        const updatedDate = response.date
+        const updatedCases = response.positive
+
+        $("#cases#").text(updatedCases)
+        $("#date").text(updatedDate)
+    })
+
+})
+
 const randomBtn = $("#randomButton")
 const homeBtn = $("#homeButton")
 const boredAPIURL = "https://www.boredapi.com/api/"
