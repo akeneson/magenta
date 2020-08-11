@@ -7,11 +7,12 @@ $(document).ready(function () {
         url: covidURL,
         method: "GET"
     }).then(function (response) {
+        console.log(response)
         const updatedDate = response.date
         const updatedCases = response.positive
-
-        $("#cases#").text(updatedCases)
-        $("#date").text(updatedDate)
+        let formattedDate = moment(`${updatedDate}`).format("MMMM Do YYYY")
+        $("#cases").text(updatedCases)
+        $("#date").text(formattedDate)
     })
 
 })
@@ -193,5 +194,4 @@ $(document).on("click", ".activityBtn", function () {
 // Listener for people count
 $(document).on("click", ".peopleBtn", function () {
     activityPeople = $(this).attr("id")
-    console.log(activityPeople)
 })
