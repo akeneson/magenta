@@ -9,8 +9,13 @@ body
   text-align: center;
   align-content: center;
 }
-.jumptron{
-  background-color: none;
+/* .jumbotron,
+.COVID{
+  background-color: transparent;
+
+} */
+.covidInfo{
+  color: maroon;
 }
 .COVID{
   color: maroon;
