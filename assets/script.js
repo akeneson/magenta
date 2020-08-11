@@ -10,7 +10,7 @@ $(document).ready(function () {
         const updatedDate = response.date
         const updatedCases = response.positive
 
-        $("#cases#").text = updatedCases
+        $("#cases#").text(updatedCases)
         $("#date").text(updatedDate)
     })
 
