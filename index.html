@@ -25,6 +25,11 @@
       integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
       crossorigin="anonymous"
     ></script>
+    <!-- Animate CSS -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+    />
     <!-- Local CSS -->
     <link rel="stylesheet" href="./assets/style.css" />
   </head>
@@ -33,11 +38,14 @@
     <div class="jumbotron jumbotron-fluid">
       <h1 class="COVID">COVID</h1>
       <h2>BoredomCrusher</h2>
+      <p class="covidInfo">Positive cases in Texas: <span id="cases"></span></p>
+      <p class="covidInfo">Information last updated on: <span id="date"></span></p>
     </div>
     <!-- Home area -->
     <div id="searchArea" class="container">
       <!-- Random Button -->
-      <button id="randomButton" class="btn btn-lg btn-primary container-fluid">
+      <button id="randomButton" class="btn btn-lg btn-primary animate__animated animate__bounceIn">
+
         Search for me
       </button>
       <hr />
@@ -94,23 +102,27 @@
         </div>
       </div>
       <br />
+
       <!-- Person Container-->
       <div class="personContainer">
         <div class="btn" aria-label="Toolbar with button groups">
           <h5>Number of persons:</h5>
           <br>
+
           <div class="btn-group container-fluid btn-secondary" role="group" aria-label="First group">
             <button type="button" class="btn btn-secondary container-fluid" disabled><i class="fas fa-users fa-2x"></i></button>
-            <button type="button" class="btn btn-secondary" id="onePerson">1</button>
-            <button type="button" class="btn btn-secondary" id="twoPerson">2</button>
-            <button type="button" class="btn btn-secondary" id="threePerson">3</button>
-            <button type="button" class="btn btn-secondary" id="fourPerson">4+</button>
+            <button type="button" class="btn btn-secondary" id="1">1</button>
+            <button type="button" class="btn btn-secondary" id="2">2</button>
+            <button type="button" class="btn btn-secondary" id="2">3</button>
+            <button type="button" class="btn btn-secondary" id="4">4+</button>
           </div>
         </div>
       </div>
       <br>
       <div class="useMyFilter">
-        <button id="useMyFilter" class="btn btn-lg btn-primary container-fluid"> Search with my filter 
+
+        <button id="useMyFilter" class="btn btn-lg btn-primary container-fluid animate__animated animate__bounceIn"> Search with my filter 
+
       </div>
     </div>
 
@@ -124,6 +136,8 @@
       src="https://kit.fontawesome.com/ff9445e543.js"
       crossorigin="anonymous"
     ></script>
+    <!-- Moment JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <!-- Local JavaScript -->
     <script src="./assets/script.js"></script>
   </body>
