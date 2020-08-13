@@ -21,7 +21,7 @@ More user friendly layout.
 
 ## Links
 
-[Team Magenta](https://akeneson.github.io/magenta/)
+[Deployed Application](https://akeneson.github.io/magenta/)
 
 ## Members
 
