@@ -7,7 +7,6 @@ $(document).ready(function () {
         url: covidURL,
         method: "GET"
     }).then(function (response) {
-        console.log(response)
         const updatedDate = response.date
         const updatedCases = response.positive
         let formattedDate = moment(`${updatedDate}`).format("MMMM Do YYYY")
@@ -98,6 +97,7 @@ function filteredSearch() {
         let activitySearchType = "type=" + activityType + "&"
         let activitySearchPeople = "participants=" + activityPeople
         let filteredSearchURL = boredAPIURL + "activity?" + activitySearchType + activitySearchPeople
+        console.log(filteredSearchURL)
 
         // Make API call
         $.ajax({
@@ -121,7 +121,6 @@ function filteredSearch() {
             let retryBtnEl = retryBtn.text("Look Again")
             if (res.error) {
                 let errorMsg = $("<p>").text("No activity found, go back to the home page and try again...")
-
                 $("#resultArea").append(errorMsg, homeBtnEl)
             } else {
 
@@ -132,13 +131,8 @@ function filteredSearch() {
                 // Participates
                 let boredAPIParticipantsEL = $("<p>").text("Number of Participants: " + res.participants)
 
-                // Price
-                let boredAPIPriceEL = $("<p>").text("Price: " + res.price)
-
-
-
                 // Add results to results area on page
-                let boredResults = $("<div>").append(boredAPIActivityEl, boredAPITypeEl, boredAPIParticipantsEL, boredAPIPriceEL, homeBtnEl, retryBtnEl)
+                let boredResults = $("<div>").append(boredAPIActivityEl, boredAPITypeEl, boredAPIParticipantsEL, homeBtnEl, retryBtnEl)
                 $("#resultArea").append(boredResults)
             }
 
@@ -186,9 +180,8 @@ $("#useMyFilter").on("click", filteredSearch)
 
 // Listener to update activity drop-downs
 $(document).on("click", ".activityBtn", function () {
-    let activityText = $(this).text()
-    $("#activityButton").text(activityText)
     activityType = $(this).text()
+    $("#activityButton").text(activityType)
 })
 
 // Listener for people count
