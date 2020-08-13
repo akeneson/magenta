@@ -9,12 +9,18 @@ body
   text-align: center;
   align-content: center;
 }
-.jumptron{
-  background-color: none;
+.jumbotron{
+  background-color: transparent!important;
+  background-image: url('https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/rm208batch3-eye-02_1_2.jpg?w=1000&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=8a3d86d9fc16e5fa6c7229560a90ab70');
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: -200px;
+  color: white;
 }
 .COVID{
   color: maroon;
-  font-size: 80px;
+  -webkit-text-fill-color: white;
+  font-size: 100px;
   background-color: none;
 }
 .btn-primary {
@@ -22,6 +28,13 @@ body
   background-color: maroon;
   border-color: maroon;
   align-self: center;
+  max-width: 340px;
+}
+.btn-secondary{
+  max-width: 270px;
+}
+.dropdown-item{
+  max-width: 270px;
 }
 
 .icon{
