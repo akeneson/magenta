@@ -41,10 +41,17 @@ function randomBtnClick() {
         method: "GET",
     }).then(function (res) {
         // Query boredapi and get results
+
+        let googleSearch = "https://www.google.com/search?q=" + res.activity
+        let googleBtn = $("<a>").attr({
+            href: googleSearch,
+            target: "_blank"
+        }).text(" | More Info")
         // Activity
-        let boredAPIActivityEl = $("<p>").text(res.activity)
+        let activityType = firstLetterToUpper(res.type)
+        let boredAPIActivityEl = $("<p>").text(res.activity).append(googleBtn)
         // Type
-        let boredAPITypeEl = $("<p>").text("Activity Type: " + res.type)
+        let boredAPITypeEl = $("<p>").text("Activity Type: " + activityType)
 
         // Participates
         let boredAPIParticipantsEL = $("<p>").text("Number of Participants: " + res.participants)
@@ -97,7 +104,6 @@ function filteredSearch() {
         let activitySearchType = "type=" + activityType + "&"
         let activitySearchPeople = "participants=" + activityPeople
         let filteredSearchURL = boredAPIURL + "activity?" + activitySearchType + activitySearchPeople
-        console.log(filteredSearchURL)
 
         // Make API call
         $.ajax({
@@ -124,9 +130,15 @@ function filteredSearch() {
                 $("#resultArea").append(errorMsg, homeBtnEl)
             } else {
 
-                let boredAPIActivityEl = $("<p>").text(res.activity)
+                let googleSearch = "https://www.google.com/search?q=" + res.activity
+                let googleBtn = $("<a>").attr({
+                    href: googleSearch,
+                    target: "_blank"
+                }).text(" | More Info")
+                let boredAPIActivityEl = $("<p>").text(res.activity).append(googleBtn)
                 // Type
-                let boredAPITypeEl = $("<p>").text("Activity Type: " + res.type)
+                let activityType = firstLetterToUpper(res.type)
+                let boredAPITypeEl = $("<p>").text("Activity Type: " + activityType)
 
                 // Participates
                 let boredAPIParticipantsEL = $("<p>").text("Number of Participants: " + res.participants)
@@ -158,6 +170,10 @@ function filteredSearch() {
     }
 
 
+}
+
+function firstLetterToUpper(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1)
 }
 
 // Listner for random buttons
