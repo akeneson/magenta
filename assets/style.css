@@ -1,3 +1,6 @@
+
+
+
 .hide {
   display: none;
 }
@@ -32,6 +35,9 @@ body
 }
 .btn-secondary{
   max-width: 270px;
+  margin: 5px;
+
+
 }
 .dropdown-item{
   max-width: 270px;
